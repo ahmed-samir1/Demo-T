@@ -28,13 +28,13 @@ public class mogo_1 {
             coll.insertOne(document);
 
             System.out.println(document + "Document inserted successfully");
+             //After Inserting the document Retrieve the document by “accountId”
 
             BasicDBObject searchQuery = new BasicDBObject();
             searchQuery.put("accountId", "gdx540");
             MongoCursor<Document> cursor = coll.find(searchQuery).iterator();
             while (cursor.hasNext()) {
                 Document x = cursor.next();
-                //After Inserting the document Retrieve the document by “accountId”
                 System.out.println(x);
                 //Calculate the available balance after deducting the onHoldAmount
                 System.out.println(x.getInteger("totalAmount") - x.getInteger("onHoldAmount"));
