@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>NewDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.17.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>assertions</artifactId>
+            <version>1.17.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.5</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.xml/jaxp-api -->
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxp-api</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.w3c/dom -->
+        <!-- https://mvnrepository.com/artifact/org.w3c/dom -->
+        <dependency>
+            <groupId>org.w3c</groupId>
+            <artifactId>dom</artifactId>
+            <version>2.3.0-jaxb-1.0.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.w3c</groupId>
+            <artifactId>epubcheck</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.0.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>3.0.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.0.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.0.4</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
