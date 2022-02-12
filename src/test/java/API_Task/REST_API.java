@@ -3,9 +3,13 @@ package API_Task;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class REST_API {
     @Test
@@ -23,11 +27,32 @@ public class REST_API {
 
 
         // Sample way to check the time of response which measure performance.
-        long startTime = System.currentTimeMillis();
+        //long startTime = System.currentTimeMillis();
         Response resp = RestAssured.get("https://api.agify.io/?name=meelad");
-        System.out.println("Status code is " + resp.getStatusCode());
-        long elapsedTime = System.currentTimeMillis() - startTime;
-        System.out.println("Total elapsed http request/response time in milliseconds: " + elapsedTime);
+        long responseTimeInSeconds = resp.getTimeIn(TimeUnit.SECONDS);
+        System.out.println("Response time in seconds using getTimeIn():" + responseTimeInSeconds);
+        System.out.println("Response Time : " + resp.getTime());
+
+        // Getting ValidatableResponse type
+        ValidatableResponse valRes = resp.then();
+        // Asserting response time is less than 5000 milliseconds
+        // L just represent long. It is in millisecond by default.
+        valRes.time(Matchers.lessThan(5000L));
+        // Asserting response time is greater than 2000 milliseconds
+        //valRes.time(Matchers.greaterThan(2000L));
+        // Asserting response time in between some values
+        //valRes.time(Matchers.both(Matchers.greaterThanOrEqualTo(4000L)).and(Matchers.lessThanOrEqualTo(1000L)));
+
+        // If we want to assert in different time units
+        //valRes.time(Matchers.lessThan(2L), TimeUnit.SECONDS);
+
+        // Print response time
+        // System.out.println("Response Time : " + resp.getTime());
+
+        // If we want to get elapsed time in different time units
+
+        // long elapsedTime = System.currentTimeMillis() - startTime;
+        // System.out.println("Total elapsed http request/response time in milliseconds: " + elapsedTime);
     }
 
     @Test
